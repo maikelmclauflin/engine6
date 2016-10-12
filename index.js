@@ -30,11 +30,13 @@ module.exports = {
                 return opts;
             };
         return function (req, res, next) {
-            var extension = path.extname(req.url);
+            var url = req.url;
+            var justpath = url.split('?')[0].split('#')[0];
+            var extension = path.extname(justpath);
             if (extension !== xtension) {
                 return next();
             }
-            var fullpath = path.join(rootpath, req.url);
+            var fullpath = path.join(rootpath, justpath);
             fs.stat(fullpath, function (err, stats) {
                 if (err) {
                     return next();
