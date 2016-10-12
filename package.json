@@ -1,6 +1,6 @@
 {
   "name": "engine6",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "auto render relative paths for your static html or other files in a simple and lightweight package",
   "main": "index.js",
   "scripts": {
