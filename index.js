@@ -18,7 +18,6 @@ module.exports = {
                     return memo.replace(new RegExp(key, 'gm'), value);
                 };
                 var rel = path.relative(filePath, options.rootpath).slice(1);
-                console.log(rel);
                 return callback(null, _.reduce({
                     __ROOT_URL__: rel
                 }, replaces, _.reduce(rep, replaces, string)));

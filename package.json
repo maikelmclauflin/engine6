@@ -1,14 +1,14 @@
 {
-  "name": "engine6",
-  "version": "1.0.4",
-  "description": "auto render relative paths for your html in a super simple super lightweight package",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Michael McLaughlin <michael@gospecless.com> (https://gospecless.com)",
-  "license": "MIT",
-  "dependencies": {
-    "lodash": "^4.16.2"
-  }
+    "name": "engine6",
+    "version": "1.0.4",
+    "description": "auto render relative paths for your static html or other files in a simple and lightweight package",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Michael McLaughlin <michael@gospecless.com> (https://gospecless.com)",
+    "license": "MIT",
+    "dependencies": {
+        "lodash": "^4.16.2"
+    }
 }
