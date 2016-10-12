@@ -1,0 +1,1 @@
+auto render relative paths for your static html or other files in a simple and lightweight package
