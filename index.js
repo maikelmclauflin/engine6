@@ -1,7 +1,4 @@
 // use with express like this
-// app.engine('html', engine6());
-// app.set('views', 'views');
-// app.set('view engine', 'html');
 var fs = require('fs');
 var _ = require('lodash');
 var path = require('path');
@@ -24,8 +21,10 @@ module.exports = {
             });
         };
     },
-    static: function (rootpath, extension, opts) {
-        var xtension = extension || '.html',
+    static: function (rootpath, extension, opts_) {
+        var xtensionIsString = _.isString(extension),
+            xtension = xtensionIsString ? extension : '.html',
+            opts = xtensionIsString ? opts_ : extension,
             options = _.isFunction(opts) ? opts : function () {
                 return opts;
             };
@@ -44,7 +43,7 @@ module.exports = {
                 if (stats.isFile()) {
                     res.render(fullpath, {
                         rootpath: rootpath,
-                        replacements: options()
+                        replacements: options(req, res)
                     });
                 } else {
                     next();
